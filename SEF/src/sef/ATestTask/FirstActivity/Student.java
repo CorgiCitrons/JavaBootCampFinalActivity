@@ -37,5 +37,8 @@ public class Student extends Person {
 	public String announce() {
 		return "I am " + getFirstName() + " " + getSecondName() + " and I am studying at " + getschoolName() + " .";
 	}
+	public  void introduce() {
+		System.out.println("I am " + getFirstName() + " " + getSecondName() + " and I am studying at " + getschoolName() + " .");
+	}
 	
 }

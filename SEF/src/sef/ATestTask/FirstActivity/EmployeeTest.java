@@ -3,6 +3,7 @@ package sef.ATestTask.FirstActivity;
 import junit.framework.TestCase;
 
 public class EmployeeTest extends TestCase {
+	private Employee Employee1;
 
     public void checkEmployeeCreatedProperly(){
         Employee employee = new Employee();

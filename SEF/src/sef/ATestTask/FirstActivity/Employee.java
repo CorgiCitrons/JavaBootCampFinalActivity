@@ -50,19 +50,16 @@ public class Employee extends Person {
 	public void setsalary(double salary) {
 		this.salary = salary;
 	}
-	public String getfirstName(){
-		return firstName="<E>"+firstName;
-	}
+
 
 
     //TODO 3 override method announce()
 	public String announce() {
 		return "My name is " + getFirstName() + " and i am " + getAge() + " years young. I work as " + getjobTitle() + " in " + getcompanyName() + ".";
 	}
-	public String toString() {
-		return "My name is " + getFirstName() + " and i am " + getAge() + " years young. I work as " + getjobTitle() + " in " + getcompanyName() + ".";
+	public  void introduce() {
+		System.out.println("My name is " + getFirstName() + " and i am " + getAge() + " years young. I work as " + getjobTitle() + " in " + getcompanyName() + ".");
 	}
-			
-
+	
 }
 			
