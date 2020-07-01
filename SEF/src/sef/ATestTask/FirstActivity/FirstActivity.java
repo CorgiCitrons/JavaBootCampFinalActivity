@@ -2,11 +2,14 @@ package sef.ATestTask.FirstActivity;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class FirstActivity {
 
 	public static void main(String[] args) {
+
 		Employee e1 = new Employee ("Elina","Sala", 31, 11, "test automation engeneer", "Accenture", 2100);
 		Employee e7 = new Employee ("Ana", "Corgi", 45, 12, "manager", "Accenture", 4000);
 		Employee e3 = new Employee ("Marcis", "Kalnins", 27, 13, "ScrumMaster", "Accenture", 4500);
@@ -22,6 +25,7 @@ public class FirstActivity {
 		emplist.add(e5);
 		emplist.add(e6);
 		
+		
 		//old list
 		System.out.println("not sorted list");
 		for (Employee emp : emplist) {
@@ -35,12 +39,22 @@ public class FirstActivity {
 		 
 		//sorted list
 		System.out.println("*************************************");
-		System.out.println("sorted list");
+		System.out.println("sorted list by salary");
 		for (Employee emp : emplist) {
             System.out.println("Salary: " + emp.getsalary());
             System.out.println("Name: " + emp.firstName + " " + emp.secondName + "; Position: " + emp.getjobTitle());
 
 		}
+//		System.out.println("*************************************");
+//		System.out.println("sorted list by name");
+//		
+//		Arrays.sort(emplist, new Comparator());
+//		for(int i=0; i < emplist.length; i++){
+//			 System.out.println("Salary: " + emp.getsalary());
+//			 System.out.println("Name: " + emp.firstName + " " + emp.secondName + "; Position: " + emp.getjobTitle());
+//		}
+		
+		
 
 		//TODO 3 create instance of a Student as a Person ->
 		
@@ -49,12 +63,22 @@ public class FirstActivity {
 		p.introduce(); 		// than ask him introduce()
 		Student s = (Student) p; 	// than make them Student
 		s.introduce();
-	}// than ask him introduce()
+		}
+	// than ask him introduce()
 
 		//TODO 4 Create method for full change of employee information
 	
 		
 		// for example some employee change his work
-
-
+//	for (int i = 0; i <Employees.size();i++) {
+//		if(i % 2 !=0)Employees.get(i).setjobTitle("manager" + i);
+//	}
+//	employees.forEach(emp -> {
+//		System.out.println(emp.ammounce());
+//	}
+//
+//
+//}
+	
 }
+
