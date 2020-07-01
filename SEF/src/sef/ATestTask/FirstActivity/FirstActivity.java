@@ -7,7 +7,7 @@ import java.util.Collections;
 public class FirstActivity {
 
 	public static void main(String[] args) {
-		Employee e1 = new Employee ("Eli1na","Sa2la", 31, 11, "test automation engeneer", "Accenture", 2100);
+		Employee e1 = new Employee ("Elina","Sala", 31, 11, "test automation engeneer", "Accenture", 2100);
 		Employee e7 = new Employee ("Ana", "Corgi", 45, 12, "manager", "Accenture", 4000);
 		Employee e3 = new Employee ("Marcis", "Kalnins", 27, 13, "ScrumMaster", "Accenture", 4500);
 		Employee e4 = new Employee ("Helga", "Lapina", 17, 50, "KAM", "Accenture", 3500);

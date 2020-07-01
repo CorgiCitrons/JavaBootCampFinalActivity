@@ -30,27 +30,15 @@ public class Person {
 	public String getFirstName() {
 		return firstName;
 	}
-	public void setFirstName(String firstName) throws CustomExceptionPerson {
-		try {
-			if (!firstName.matches("^[a-zA-Z]+$")) {
-				throw new CustomExceptionPerson();
+
+	public void setFirstName(String firstName) {
+		if (!firstName.matches("[a-zA-Z]+"))
+		{
+			throw new IllegalArgumentException("Input can not be number!!!");
 			}
-		} catch (CustomExceptionPerson e) {
-			System.out.println("Name contain number");
-		}
 		this.firstName = firstName;
+
 	}
-//	public void setFirstName(String firstName) throws CustomExceptionPerson{
-//		try
-//		{
-//			if(firstName.matches("[a-zA-Z]+")) {
-//				throw new CustomExceptionPerson("Invalid entry. First name contains number");}
-//		}catch (CustomExceptionPerson e) {
-//			System.out.println("Invalid entry. First name contains number");
-//
-//			}
-//		this.firstName = firstName;
-//	}
 
 	// getter for int age
 	public int getAge() {
@@ -67,22 +55,20 @@ public class Person {
 	}
 
 	public void setSecondName(String secondName) {
-		try {
-			if(!secondName.matches("[a-zA-Z]+")) {
-				throw new CustomExceptionPerson("Invalid entry. Second name contains number");
+		if(!secondName.matches("[a-zA-Z]+")) {
+			throw new IllegalArgumentException("Input can not be number!!!");
 			}
-		} catch (CustomExceptionPerson e1) {
-			System.out.println("Invalid entry. Second name contains number");
-		}
 		this.secondName = secondName;
-		
-		
-		if (y==0) {
-			throw new ArithmeticException("Argument 'divisor' is 0. Can not delete"); 
-		} else {
-		return x / y;
-		
-	}
+		}
+	
+	//Check first name Ivan3
+//	public static void main(String arg[]){
+//		try {
+//			setFirstName("Ivan3");
+//		} catch (IllegalArgumentException c) {
+//			System.out.println("Invalid input!");}			
+//		}
+//}
 
 	//TODO 2 add all person info into announce() method
 	public String announce() {
