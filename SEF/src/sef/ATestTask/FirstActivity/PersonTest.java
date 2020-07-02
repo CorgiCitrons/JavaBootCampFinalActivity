@@ -6,29 +6,44 @@ public class PersonTest extends TestCase {
 	
 	private Person person;
 	
-	protected void testsetUp() throws Exception {
-		person = new Person();
+	public void checkDefVal() {
+		Person h = new Person();
+		assertEquals("Unknown", h.getFirstName());
+		assertEquals("Unknown", h.getSecondName());
+		assertEquals(0, h.getAge());
 	}
-	public void testSetAndGetFirstName() {
-		String testfirstName = "Elina";
-		assertNull(person.getFirstName());
-		person.setFirstName(testfirstName);
-		assertEquals(testfirstName, person.getFirstName());
-		
-	}
-	public void testSetAndGetSecondName() {
-		String testsecondName = "Corgi";
-		assertNull(person.getSecondName());
-		person.setSecondName(testsecondName);
-		assertEquals(testsecondName, person.getSecondName());
+	public void testInputCon() {
+		Person h = new Person("Elina","Sala",31);
+		assertEquals("Elina",h.getFirstName());
+		assertEquals("Sala",h.getSecondName());
+		assertEquals(31, h.getAge());
 		
 	}
 	public void testSetAndGetAge() {
+		Person a3 = new Person();
 		int testAge = 21;
 		assertEquals(0, 0);
-		person.setAge(testAge);
-		assertEquals(testAge, person.getAge());
-		
-		
+		a3.setAge(testAge);
+		assertEquals(testAge, a3.getAge());
+	}
+	public void testThrowErrFirstName() {
+		Person h = new Person();
+		try {
+			h.setFirstName("Elina2");
+		} catch (CustomExceptionPerson e) {
+			assertEquals("You can not input information with numbers and symbols!", e.getMessage());
+		}
+	}
+	public void testThrowErrSecondName() {
+		Person h = new Person();
+		try {
+			h.setSecondName("Sa2la");
+		} catch (CustomExceptionPerson e) {
+			assertEquals("You can not input information with numbers and symbols!", e.getMessage());
+		}
+	}
+	public void testIntroduction () {
+		Person h = new Person("Elina", "Sala", 31);
+		assertEquals("I am Elina Sala and i am 31 years young.", h.announce());
 	}
 }
