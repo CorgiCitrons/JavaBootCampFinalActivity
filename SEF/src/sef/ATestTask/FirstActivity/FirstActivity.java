@@ -47,13 +47,14 @@ public class FirstActivity {
 		}
 //		System.out.println("*************************************");
 //		System.out.println("sorted list by name");
-//		
-//		Arrays.sort(emplist, new Comparator());
-//		for(int i=0; i < emplist.length; i++){
+//	}
+//	
+//		Arrays.sort(emplist, new NameComparator();
+//		for(int i=0; i < emplist.lenght; i++){
 //			 System.out.println("Salary: " + emp.getsalary());
 //			 System.out.println("Name: " + emp.firstName + " " + emp.secondName + "; Position: " + emp.getjobTitle());
 //		}
-		
+//		
 		
 
 		//TODO 3 create instance of a Student as a Person ->

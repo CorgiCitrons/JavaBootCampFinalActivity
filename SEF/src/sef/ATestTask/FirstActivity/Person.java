@@ -8,44 +8,36 @@ public class Person {
 	public String secondName;
 	private int age;	
 
-	//Behavior - default constructor
 	public Person(){
 		this.firstName="Unknown";
 		this.secondName = "Unknown";
 		this.age = 0;
 	}
 
-	//Behavior - parameterized constructor
 	public Person(String firstName, String secondName, int age){
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.age = age;
 	}
 
-	// getter for String firstName
-	
-	//In class Person add check when set firstName and secondName, check no numbers there. ->
-	
-	//setName("Ivan3") should throw the customized exception
 	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
+	public void setFirstName(String firstName) throws CustomExceptionPerson {
 		if (!firstName.matches("[a-zA-Z]+"))
 		{
-			throw new IllegalArgumentException("Input can not be number!!!");
+			throw new CustomExceptionPerson();
 			}
 		this.firstName = firstName;
 
+
 	}
 
-	// getter for int age
 	public int getAge() {
 		return age;
 	}
 
-	// setter for int age
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -54,9 +46,9 @@ public class Person {
 		return secondName;
 	}
 
-	public void setSecondName(String secondName) {
+	public void setSecondName(String secondName) throws CustomExceptionPerson {
 		if(!secondName.matches("[a-zA-Z]+")) {
-			throw new IllegalArgumentException("Input can not be number!!!");
+			throw new CustomExceptionPerson();
 			}
 		this.secondName = secondName;
 		}
@@ -65,12 +57,11 @@ public class Person {
 //	public static void main(String arg[]){
 //		try {
 //			setFirstName("Ivan3");
-//		} catch (IllegalArgumentException c) {
-//			System.out.println("Invalid input!");}			
+//		} catch (CustomExceptionPerson c) {
+//			System.out.println("Invalid input!");
+//			System.out.println (c.getMessage());}		
 //		}
-//}
 
-	//TODO 2 add all person info into announce() method
 	public String announce() {
 		return "I am " + getFirstName() + " " + getSecondName() + " and i am " + getAge() + " years young.";
 	}
