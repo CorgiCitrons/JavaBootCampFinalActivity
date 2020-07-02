@@ -64,22 +64,22 @@ public class FirstActivity {
 		p.introduce(); 		// than ask him introduce()
 		Student s = (Student) p; 	// than make them Student
 		s.introduce();
-		}
+		
 	// than ask him introduce()
 
 		//TODO 4 Create method for full change of employee information
 	
+
 		
+		System.out.println("*************************************");
 		// for example some employee change his work
-//	for (int i = 0; i <Employees.size();i++) {
-//		if(i % 2 !=0)Employees.get(i).setjobTitle("manager" + i);
-//	}
-//	employees.forEach(emp -> {
-//		System.out.println(emp.ammounce());
-//	}
-//
-//
-//}
+	for (int i = 0; i <emplist.size();i++) {
+		if(i % 2 !=0)emplist.get(i).setjobTitle("teacher");
+	}
+	emplist.forEach(emp -> {
+		System.out.println(emp.announce());
 	
+	});
+}
 }
 
